@@ -1,4 +1,4 @@
-### **Flashcard Learning App**
+## **Flashcard Learning App**
 
 ## **Project Overview**
 
