@@ -59,8 +59,8 @@ FlashcardApp/
 ### **2. Using the Application**
 
 - **Flipping the Card**: The card will automatically flip after 3 seconds, revealing the English translation.
-- **Correct Button**: Clicking this button saves the word as "learned" and store it to a words_learned.csv file and shows the next card.
-- **Wrong Button**: Clicking this button skips the word and store it to a words_to_learn.csv and shows the next card.
+- **Correct Button**: Clicking this button saves the word as "learned" and store it to a **`words_learned.csv`** file and shows the next card.
+- **Wrong Button**: Clicking this button skips the word and store it to a **`words_to_learn.csv`** and shows the next card.
 
 
 ## **Troubleshooting**
