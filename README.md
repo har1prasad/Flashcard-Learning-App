@@ -74,8 +74,6 @@ If you encounter any issues or errors, ensure that:
 - All file paths are correct.
 - Required libraries are installed.
 
----
-
 ## **Extending the Project**
 
 ### **1. Adding More Words**
@@ -94,8 +92,3 @@ To add more words to the flashcards:
 - **Add a Score Counter**: Track the number of correct and incorrect responses.
 - **Implement Difficulty Levels**: Allow users to choose between different difficulty levels (e.g., Easy, Medium, Hard) based on the frequency of word occurrence.
 
----
-
-## **Conclusion**
-
-This Flashcard Learning Application is a simple yet powerful tool for language learning. By extending and customizing it, you can create a more personalized learning experience. The application uses Python’s Tkinter library for the graphical interface and Pandas for efficient data handling, making it both user-friendly and easy to maintain.
