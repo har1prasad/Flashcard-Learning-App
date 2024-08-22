@@ -18,13 +18,20 @@ current_card = {}
 
 
 def next_card():
+    def next_card():
     global current_card, flip_timer
     window.after_cancel(flip_timer)
-    current_card = random.choice(data_dictionary)
-    canvas.itemconfig(canvas_img, image=card_front)
-    canvas.itemconfig(card_title, text="French", fill="black")
-    canvas.itemconfig(card_word, text=current_card["French"], fill="black")
-    flip_timer = window.after(3000, func=flipping)
+
+    if not data_dictionary:  # Check if there are no words left
+        canvas.itemconfig(canvas_img, image=card_front)
+        canvas.itemconfig(card_title, text="Completed", fill="black")
+        canvas.itemconfig(card_word, text="", fill="black")
+    else:
+        current_card = random.choice(data_dictionary)
+        canvas.itemconfig(canvas_img, image=card_front)
+        canvas.itemconfig(card_title, text="French", fill="black")
+        canvas.itemconfig(card_word, text=current_card["French"], fill="black")
+        flip_timer = window.after(3000, func=flipping)
 
 
 def flipping():
