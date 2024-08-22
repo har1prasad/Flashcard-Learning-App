@@ -26,6 +26,7 @@ FlashcardApp/
 │
 ├── data/
 │   ├── desired_language_words.csv
+│   ├── desired_language_words(2).csv
 │   ├── words_learned.csv (This file is created during runtime)
 │   └── words_to_learn.csv (This file is created during runtime)
 │
