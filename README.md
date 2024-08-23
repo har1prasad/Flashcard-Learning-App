@@ -88,6 +88,7 @@ To add more words to the flashcards:
 
 - **Changing the Background Color**: Modify the `BACKGROUND_COLOR` variable.
 - **Updating the Font Style**: Customize the fonts used in `card_title` and `card_word` in the `Canvas` widget.
+- **Implementing Listbox for selecting the csv file**: can add a list box containing the files in **`.\Data\`** for selecting which languages flash card should appear.
 
 ### **3. Enhancing Functionality**
 - **Add a Score Counter**: Track the number of correct and incorrect responses.
