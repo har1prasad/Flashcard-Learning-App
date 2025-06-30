@@ -1,96 +1,127 @@
-## **Flashcard Learning App**
+# 📚 FlashcardApp — Learn Faster, Remember Longer
 
-## **Project Overview**
+A simple yet powerful flashcard application built with Python and Tkinter to help you learn any language or vocabulary efficiently. This app mimics physical flashcards and adapts as you learn by tracking which words you've mastered and which you still need to review.
 
-This project is a **Flashcard Learning Application** designed to help users learn words in a desired language along with their English translations. The application displays words in the desired language on flashcards, which the user attempts to translate within a time limit. After the time expires, the card flips to show the English translation. The user can mark words as "learned," and these words are saved and removed from the deck to avoid repetition.
+---
 
-## **Prerequisites**
+## 🖼️ Preview
 
-Before running the project, ensure that you have the following installed:
-- **Python 3.x**: The programming language used for this project.
-- **Tkinter**: Python's standard GUI package.
-- **Pandas**: A library used for data manipulation and analysis.
+> *\[Include a small demo GIF or screenshots here if available — showing a word flipping to its meaning after a few seconds, with buttons for correct/incorrect answers.]*
 
-To install Pandas, use:
-```bash
-pip install pandas
-```
+---
 
-## **Project Setup**
+## 🚀 Features
 
-### **1. Project Directory Structure**
+* ⏱️ Automatically flips the card after a short delay to show the meaning.
+* ✅ Tracks your progress — learned words are saved and won't appear again.
+* 📁 Works with **any language or vocabulary CSV** (just two columns).
+* 💾 Saves both **words you've learned** and **words still to learn**.
+* 🖼️ Clean UI with visual feedback using card images and icons.
 
-The project should have the following directory structure:
+---
+
+## 📁 Project Structure
+
 ```
 FlashcardApp/
 │
 ├── data/
-│   ├── desired_language_words.csv
-│   ├── desired_language_words(2).csv
-│   ├── words_learned.csv (This file is created during runtime)
-│   └── words_to_learn.csv (This file is created during runtime)
+│   ├── desired_language_words.csv        # Your source word list (rename as needed)
+│   ├── words_learned.csv                 # Created during runtime
+│   └── words_to_learn.csv                # Created during runtime
 │
 ├── images/
-│   ├── card_front.png
-│   ├── card_back.png
-│   ├── right.png
-│   └── wrong.png
+│   ├── card_front.png                    # Flashcard front image
+│   ├── card_back.png                     # Flashcard back image
+│   ├── right.png                         # Tick/check icon
+│   └── wrong.png                         # Cross icon
 │
-├── main.py
-└── README.md
+└── main.py                               # Main Python script
 ```
 
-### **2. Data Files**
+---
 
-- **`desired_language_english_words.csv`**: This file contains words in the desired language and their English translations. Ensure it is placed inside the `data/` directory.
-- **`words_learned.csv`** and **`words_to_learn.csv`**: These files will be automatically generated during runtime. They track the user's progress by storing learned words and the remaining words to learn.
+## 📄 Data Format
 
-## **How to Run the Project**
+Your word list should be in a CSV file (like `Sanskrit.csv`) with **exactly two columns**:
 
-### **1. Running the Application**
+```
+Word,Meaning
+नमस्ते,Hello
+पुस्तक,Book
+...
+```
 
-1. Ensure that all prerequisites are installed and that the directory structure is correctly set up.
-2. Navigate to the project directory using the terminal.
-3. Run the application using the following command:
-    ```bash
-    python main.py
-    ```
-4. The application window will open, displaying a flashcard with a word in the desired language.
+* The **first column** is shown first.
+* After a short delay, the card **flips to reveal the second column**.
 
-### **2. Using the Application**
+---
 
-- **Flipping the Card**: The card will automatically flip after 3 seconds, revealing the English translation.
-- **Correct Button**: Clicking this button saves the word as "learned" and store it to a **`words_learned.csv`** file and shows the next card.
-- **Wrong Button**: Clicking this button skips the word and store it to a **`words_to_learn.csv`** and shows the next card.
+## 🔧 How to Run
 
+1. **Clone the repository** or download the files.
 
-## **Troubleshooting**
+2. Make sure you have **Python 3.x** installed.
 
-### **1. Common Issues**
-- **FileNotFoundError**: Ensure that the `desired_language_english_words.csv` file is in the correct directory.
-- **GUI Not Displaying**: Check the images' paths and ensure they are in the `images/` directory.
+3. Install **pandas** if not already:
 
-### **2. Logs and Errors**
-If you encounter any issues or errors, ensure that:
-- All file paths are correct.
-- Required libraries are installed.
+   ```bash
+   pip install pandas
+   ```
 
-## **Extending the Project**
+4. Place your `desired_language_words.csv` file inside the `data/` folder.
 
-### **1. Adding More Words**
+   * Rename it to `Sanskrit.csv` or change the filename in `main.py`.
 
-To add more words to the flashcards:
-1. Open the `desired_language_english_words.csv` file in a text editor or spreadsheet.
-2. Add new rows with the word in the desired language in the first column and the English translation in the second column.
-3. Save the file.
+5. Run the app:
 
-### **2. Customizing the UI**
+   ```bash
+   python main.py
+   ```
 
-- **Changing the Background Color**: Modify the `BACKGROUND_COLOR` variable.
-- **Updating the Font Style**: Customize the fonts used in `card_title` and `card_word` in the `Canvas` widget.
-- **Implementing Listbox for selecting the csv file**: can add a list box containing the files in **`.\Data\`** for selecting which languages flash card should appear.
+---
 
-### **3. Enhancing Functionality**
-- **Add a Score Counter**: Track the number of correct and incorrect responses.
-- **Implement Difficulty Levels**: Allow users to choose between different difficulty levels (e.g., Easy, Medium, Hard) based on the frequency of word occurrence.
+## 🎯 How It Works
 
+* The app loads words from `words_to_learn.csv` if it exists; else, it falls back to the original data file.
+* Each flashcard:
+
+  * Shows the word (front side).
+  * After 3 seconds, flips to show the meaning (back side).
+* If you click ✅ (Right), the word is saved to `words_learned.csv` and removed from the learning pool.
+* If you click ❌ (Wrong), it stays in the pool for future review.
+* Once you learn all words, it shows a **"Completed"** message.
+
+---
+
+## 💡 Customize It
+
+You can customize:
+
+* **CSV Filename**: Change `DATA_FILE` in `main.py`.
+* **Images**: Replace any image inside `/images` with your own designs.
+* **Flip Delay**: Change the `3000` ms value to something faster/slower in:
+
+  ```python
+  flip_timer = window.after(3000, func=flipping)
+  ```
+
+---
+
+## 🧠 Ideal For
+
+* Language learners (Sanskrit, Hindi, Japanese, etc.)
+* Vocabulary building
+* Educational games
+* Personal spaced repetition tools
+
+---
+
+## 📌 Dependencies
+
+* `tkinter` (comes with Python)
+* `pandas`
+
+---
+
+Built by Hari with ❤️ for learners.
