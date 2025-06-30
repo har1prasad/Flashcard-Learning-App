@@ -2,14 +2,12 @@
 
 A simple yet powerful flashcard application built with Python and Tkinter to help you learn any language or vocabulary efficiently. This app mimics physical flashcards and adapts as you learn by tracking which words you've mastered and which you still need to review.
 
----
 
 ## 🖼️ Preview
 
 <p align="center">
   <img src="Flashcards/demo.gif" width="450" alt="Flashcard demo" />
 </p>
----
 
 ## 🚀 Features
 
