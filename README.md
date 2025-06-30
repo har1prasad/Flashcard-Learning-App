@@ -1,4 +1,4 @@
-# FlashcardApp — Learn Faster, Remember Longer
+# 📚 FlashcardApp
 
 A simple yet powerful flashcard application built with Python and Tkinter to help you learn any language or vocabulary efficiently. This app mimics physical flashcards and adapts as you learn by tracking which words you've mastered and which you still need to review.
 
