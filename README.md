@@ -6,8 +6,9 @@ A simple yet powerful flashcard application built with Python and Tkinter to hel
 
 ## 🖼️ Preview
 
-> *\[Include a small demo GIF or screenshots here if available — showing a word flipping to its meaning after a few seconds, with buttons for correct/incorrect answers.]*
-
+<p align="center">
+  <img src="Flashcards/demo.gif" width="450" alt="Flashcard demo" />
+</p>
 ---
 
 ## 🚀 Features
