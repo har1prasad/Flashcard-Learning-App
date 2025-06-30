@@ -1,4 +1,4 @@
-# 📚 FlashcardApp — Learn Faster, Remember Longer
+# FlashcardApp — Learn Faster, Remember Longer
 
 A simple yet powerful flashcard application built with Python and Tkinter to help you learn any language or vocabulary efficiently. This app mimics physical flashcards and adapts as you learn by tracking which words you've mastered and which you still need to review.
 
@@ -9,17 +9,17 @@ A simple yet powerful flashcard application built with Python and Tkinter to hel
   <img src="Flashcards/demo.gif" width="450" alt="Flashcard demo" />
 </p>
 
-## 🚀 Features
+## Features
 
-* ⏱️ Automatically flips the card after a short delay to show the meaning.
-* ✅ Tracks your progress — learned words are saved and won't appear again.
-* 📁 Works with **any language or vocabulary CSV** (just two columns).
-* 💾 Saves both **words you've learned** and **words still to learn**.
-* 🖼️ Clean UI with visual feedback using card images and icons.
+* Automatically flips the card after a short delay to show the meaning.
+* Tracks your progress — learned words are saved and won't appear again.
+* Works with **any language or vocabulary CSV** (just two columns).
+* Saves both **words you've learned** and **words still to learn**.
+* Clean UI with visual feedback using card images and icons.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FlashcardApp/
@@ -40,7 +40,7 @@ FlashcardApp/
 
 ---
 
-## 📄 Data Format
+## Data Format
 
 Your word list should be in a CSV file (like `Sanskrit.csv`) with **exactly two columns**:
 
@@ -56,7 +56,7 @@ Word,Meaning
 
 ---
 
-## 🔧 How to Run
+## How to Run
 
 1. **Clone the repository** or download the files.
 
@@ -80,7 +80,7 @@ Word,Meaning
 
 ---
 
-## 🎯 How It Works
+## How It Works
 
 * The app loads words from `words_to_learn.csv` if it exists; else, it falls back to the original data file.
 * Each flashcard:
@@ -93,7 +93,7 @@ Word,Meaning
 
 ---
 
-## 💡 Customize It
+## Customize It
 
 You can customize:
 
@@ -107,7 +107,7 @@ You can customize:
 
 ---
 
-## 🧠 Ideal For
+## Ideal For
 
 * Language learners (Sanskrit, Hindi, Japanese, etc.)
 * Vocabulary building
@@ -116,7 +116,7 @@ You can customize:
 
 ---
 
-## 📌 Dependencies
+## Dependencies
 
 * `tkinter` (comes with Python)
 * `pandas`
